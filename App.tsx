@@ -9,8 +9,11 @@ import { NewAppScreen } from '@react-native/new-app-screen';
 import { StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
 import {
   SafeAreaProvider,
+  SafeAreaView,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -27,9 +30,9 @@ function AppContent() {
   const safeAreaInsets = useSafeAreaInsets();
 
   return (
-    <View style={styles.container}>
-   <Text>ertwetr</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+  <Icon name="rocket" size={30} color="#900" />
+    </SafeAreaView>
   );
 } 
 
